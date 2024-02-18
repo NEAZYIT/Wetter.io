@@ -171,7 +171,7 @@
     */
 
 
-    .italiana-regular {
+    .italiana-logo {
         font-family: var(--italiana);
         font-weight: var(--weight-regular);
         font-style: normal;
@@ -186,5 +186,129 @@
 }
 
 /**
-* REST
-*/
+ * Reset Styles for Improved Consistency
+ */
+
+/* Apply box-sizing to all elements */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove list styling from list items */
+li {
+    list-style: none;
+}
+
+/* Set display to block for common inline elements */
+a,
+img,
+span,
+input,
+button {
+    display: block;
+}
+
+/* Reset link styles for better control */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Ensure images scale proportionally */
+img {
+    height: auto;
+}
+
+/* Normalize styles for input and button elements */
+input,
+button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+}
+
+/* Additional Styles for Specific Elements */
+input {
+    width: 100%;
+    /* Make input elements fill their parent container's width */
+}
+
+button {
+    cursor: pointer;
+    /* Change cursor to pointer to indicate interactivity */
+}
+
+sub {
+    vertical-align: baseline;
+    /* Align subscript text to the baseline for better vertical positioning */
+}
+
+/* Styles for Superscript Text */
+sup {
+    vertical-align: top;
+    /* Align superscript text to the top for improved vertical positioning */
+}
+
+/* Styles for Subscript and Superscript Text */
+sub,
+sup {
+    font-size: 0.75em;
+    /* Set the font size for subscript and superscript text to 0.75em (75% of the parent's font size) */
+}
+
+/* Global Styles for HTML Element */
+html {
+    font-family: var(--montserrat);
+    /* Set the default font family for the entire document */
+    font-size: 10px;
+    /* Set the base font size to 10px for easy rem unit calculations */
+    scroll-behavior: smooth;
+    /* Enable smooth scrolling behavior for anchor links */
+}
+
+/* Global Styles for Body Element */
+body {
+    background-color: var(--background);
+    /* Set the background color using the --background variable */
+    color: var(--on-background);
+    /* Set the text color using the --on-background variable */
+    font-size: var(--body-3);
+    /* Set the default font size using the --body-3 variable */
+    overflow: hidden;
+    /* Hide overflow content */
+}
+
+/* Styles for Focusable Elements with Visible Focus */
+:focus-visible {
+    outline: 2px solid var(--white);
+    /* Set a visible outline for focusable elements */
+    outline-offset: 2px;
+    /* Offset the outline for better visual appearance */
+}
+
+/* Styles for Text Selection */
+::selection {
+    background-color: var(--white-alpha-8);
+    /* Set the background color for selected text */
+}
+
+/* Styles for WebKit Scrollbar (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 6px;
+    /* Set the width of the scrollbar */
+    height: 6px;
+    /* Set the height of the scrollbar for horizontal scrolling (adjust as needed) */
+}
+
+/* Styles for WebKit Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+    background-color: var(--white-alpha-8);
+    /* Set the background color of the scrollbar thumb */
+    border-radius: var(--radius-pill);
+    /* Set the border radius of the scrollbar thumb for rounded corners */
+}
