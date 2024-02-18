@@ -313,30 +313,63 @@ body {
     /* Set the border radius of the scrollbar thumb for rounded corners */
 }
 
-/* ICONES */
+/**
+ * Icon Fonts - Material Symbols Rounded
+ */
 
+/* Define the font face for Material Symbols Rounded */
 @font-face {
     font-family: 'Material Symbols Rounded';
     font-style: normal;
     font-weight: 400;
     src: url(../fonts/material-symbol-rounded.woff2) format('woff2');
+    /*
+        Specify the font file path and format for Material Symbols Rounded.
+        Adjust the path and format accordingly for your project.
+    */
 }
 
+/* Icon Class Styles */
 .m-icone {
     font-family: 'Material Symbols Rounded';
+    /*
+        Set the font family to 'Material Symbols Rounded'.
+        This class is meant for displaying icons from this font family.
+    */
     font-weight: normal;
     font-style: normal;
     font-size: 2.4rem;
+    /*
+        Set the font size to 2.4rem for the icon.
+        Adjust as needed based on your design requirements.
+    */
     line-height: 1;
     letter-spacing: normal;
     text-transform: none;
     white-space: nowrap;
     word-wrap: normal;
     direction: ltr;
+    /*
+        Define additional font and text properties for consistent icon display.
+        You can customize these properties based on your design preferences.
+    */
     font-feature-settings: 'liga';
     -webkit-font-feature-settings: "liga";
+    /*
+        Enable ligatures for improved icon rendering.
+    */
     -webkit-font-smoothing: antialiased;
+    /*
+        Enable antialiasing for smoother icon edges.
+    */
     height: 1em;
     width: 1em;
+    /*
+        Set the height and width of the icon.
+        Adjust these values as needed for proper sizing.
+    */
     overflow: hidden;
+    /*
+        Hide any overflow content to ensure consistent icon rendering.
+    */
 }
