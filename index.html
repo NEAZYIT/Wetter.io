@@ -85,7 +85,7 @@
     -->
 
     <!-- 8. JavaScript Links -->
-    <script src="assets/js/app.js type="module"></script>
+    <script src="assets/js/app.js type=" module"></script>
     <!--
     This script tag includes an external JavaScript file in your HTML document.
     - "src="assets/js/app.js": Specifies the path to your JavaScript file.
@@ -125,6 +125,74 @@
 </head>
 
 <body>
+    <!--
+    Header Section Documentation
+    -->
+
+    <!-- Header Container -->
+    <header class="header">
+        <div class="container">
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="/assets/images/logo-removebg-preview.png" width="88" height="69" alt="logo">
+            </a>
+
+            <!-- Search View -->
+            <div class="search-view" data-search-view>
+
+                <!-- Search Wrapper -->
+                <div class="search-wrapper">
+
+                    <!-- Search Input Field -->
+                    <input type="search" name="search" placeholder="Search City..." autocomplete="off"
+                        class="search-field" data-search-search>
+
+                    <!-- Search Icon -->
+                    <span class="m-icone">search</span>
+
+                    <!-- Close Search Button -->
+                    <button class="icon-btn leading-icon has-state" aria-label="close search" data-search-toggler>
+                        <span class="m-icone">arrow_back</span>
+                    </button>
+                </div>
+
+                <!-- Search Result -->
+                <div class="search-result" data-search-result>
+
+                    <!-- Search Result List -->
+                    <ul class="view-list" data-search-list>
+
+                        <!-- Search Result Item -->
+                        <li class="view-item">
+
+                            <!-- Location Icon -->
+                            <span class="m-icone">location_on</span>
+
+                            <!-- Item Details -->
+                            <div>
+                                <p class="item-title">Kenitra</p>
+                                <p class="label-2 item-subtitle">State of Kenitra, MA</p>
+                            </div>
+
+                            <!-- Item Link -->
+                            <a href="#" class="item-link has-state" data-search-toggler></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+                <!-- Open Search Button -->
+                <button class="icon-btn has-state" aria-label="open search" data-search-toggler>
+                    <span class="m-icone icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
 
 </body>
 
