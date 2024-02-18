@@ -41,7 +41,7 @@
     Describes the content and encourages users to engage with the site.
     -->
 
-    <!-- Favicon Link -->
+    <!-- 5. Favicon Link -->
     <link rel="icon" href="favicone.ico" sizes="16x16" type="image/x-icon">
     <!--
     This link tag specifies the favicon, a small icon displayed in the browser tab.
@@ -50,14 +50,75 @@
     - "type="image/x-icon"": Declares the file type as an icon for compatibility.
     -->
 
-    <!-- 5. Additional Notes -->
+    <!-- 6. Font Links -->
+    <!-- a. Preconnect to Google Fonts Server -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--
+    Establishes an early connection to the Google Fonts server.
+    This improves page loading speed by preconnecting to the server hosting the web fonts.
+    -->
+
+    <!-- b. Preconnect to Google Fonts Static Content Server with Cross-Origin -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--
+    Preconnects to the Google Fonts static content server with the crossorigin attribute.
+    This allows the browser to fetch fonts in parallel, enhancing performance.
+    -->
+
+    <!-- c. Font Stylesheet Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!--
+    Links to the Google Fonts stylesheet, providing styles for the selected fonts.
+    - "https://fonts.googleapis.com/css2": Base URL for Google Fonts CSS.
+    - "family=Italiana&family=Montserrat": Specifies the font families to be imported.
+    - "family=Nunito+Sans:wght@400;600": Specifies the font families (Nunito Sans with weights 400 and 600) to be imported in the second link.
+    - "display=swap": Ensures text remains visible during font loading, improving user experience.
+    -->
+
+    <!-- 7. CSS Links -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--
+    This link tag imports an external CSS stylesheet into your HTML document.
+    - "rel="stylesheet"": Specifies that the linked file is a stylesheet.
+    - "href="assets/css/style.css"": Specifies the path to your CSS file.
+    -->
+
+    <!-- 8. JavaScript Links -->
+    <script src="assets/js/app.js type="module"></script>
+    <!--
+    This script tag includes an external JavaScript file in your HTML document.
+    - "src="assets/js/app.js": Specifies the path to your JavaScript file.
+    - "type="module"": Declares that the script is an ECMAScript module.
+    -->
+    <script src="assets/js/route.js" type="module"></script>
+    <!--
+    This script tag includes an external JavaScript file as an ECMAScript module in your HTML document.
+    - "src="assets/js/route.js": Specifies the path to your JavaScript module file.
+    - "type="module"": Declares that the script is an ECMAScript module.
+    -->
+
+    <!-- 9. Additional Notes -->
+
+    <!-- Additional Notes -->
+    <!--
+    - Include these links within the <head> section of your HTML document.
+    - Customize font families based on your design preferences.
+    - The "preconnect" links improve performance by optimizing font loading.
+    - The crossorigin attribute is added for cross-origin requests to the fonts.gstatic.com server.
+    - The display=swap parameter in the stylesheet link helps prevent invisible text during font loading.
+    - Ensure the href attribute in the font stylesheet link is accurate and up-to-date.
+    - Google Fonts provides a wide variety of fonts; customize the link based on your font choices.
+    -->
+
+    <!-- 10. Additional Notes -->
     <!--
     - Place these meta tags in the <head> section of your HTML document.
     - Customize title and description to accurately represent your project.
     - Consider adding more meta tags for SEO, social media, or specific project needs.
     -->
 
-    <!-- 6. End of Meta Tags and Head Elements -->
+    <!-- 11. End of Meta Tags and Head Elements -->
     <!-- 
     Complete the head section here. Add more meta tags or head elements as needed for your project.
     -->
