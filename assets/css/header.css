@@ -1,0 +1,339 @@
+/**
+ * Reset Styles for Improved Consistency
+ */
+
+/* Apply box-sizing to all elements */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove list styling from list items */
+li {
+    list-style: none;
+}
+
+/* Set display to block for common inline elements */
+a,
+img,
+span,
+input,
+button {
+    display: block;
+}
+
+/* Reset link styles for better control */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Ensure images scale proportionally */
+img {
+    height: auto;
+}
+
+/* Normalize styles for input and button elements */
+input,
+button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+}
+
+/* Additional Styles for Specific Elements */
+input {
+    width: 100%;
+    /* Make input elements fill their parent container's width */
+}
+
+button {
+    cursor: pointer;
+    /* Change cursor to pointer to indicate interactivity */
+}
+
+sub {
+    vertical-align: baseline;
+    /* Align subscript text to the baseline for better vertical positioning */
+}
+
+/* Styles for Superscript Text */
+sup {
+    vertical-align: top;
+    /* Align superscript text to the top for improved vertical positioning */
+}
+
+/* Styles for Subscript and Superscript Text */
+sub,
+sup {
+    font-size: 0.75em;
+    /* Set the font size for subscript and superscript text to 0.75em (75% of the parent's font size) */
+}
+
+/* Global Styles for HTML Element */
+html {
+    font-family: var(--montserrat);
+    /* Set the default font family for the entire document */
+    font-size: 10px;
+    /* Set the base font size to 10px for easy rem unit calculations */
+    scroll-behavior: smooth;
+    /* Enable smooth scrolling behavior for anchor links */
+}
+
+/* Global Styles for Body Element */
+body {
+    background-color: var(--background);
+    /* Set the background color using the --background variable */
+    color: var(--on-background);
+    /* Set the text color using the --on-background variable */
+    font-size: var(--body-3);
+    /* Set the default font size using the --body-3 variable */
+    overflow: hidden;
+    /* Hide overflow content */
+}
+
+/* Styles for Focusable Elements with Visible Focus */
+:focus-visible {
+    outline: 2px solid var(--white);
+    /* Set a visible outline for focusable elements */
+    outline-offset: 2px;
+    /* Offset the outline for better visual appearance */
+}
+
+/* Styles for Text Selection */
+::selection {
+    background-color: var(--white-alpha-8);
+    /* Set the background color for selected text */
+}
+
+/* Styles for WebKit Scrollbar (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 6px;
+    /* Set the width of the scrollbar */
+    height: 6px;
+    /* Set the height of the scrollbar for horizontal scrolling (adjust as needed) */
+}
+
+/* Styles for WebKit Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+    background-color: var(--white-alpha-8);
+    /* Set the background color of the scrollbar thumb */
+    border-radius: var(--radius-pill);
+    /* Set the border radius of the scrollbar thumb for rounded corners */
+}
+
+/**
+ * Icon Fonts - Material Symbols Rounded
+ */
+
+/* Define the font face for Material Symbols Rounded */
+@font-face {
+    font-family: 'Material Symbols Rounded';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/material-symbol-rounded.woff2) format('woff2');
+    /*
+        Specify the font file path and format for Material Symbols Rounded.
+        Adjust the path and format accordingly for your project.
+    */
+}
+
+/* Icon Class Styles */
+.m-icone {
+    font-family: 'Material Symbols Rounded';
+    /*
+        Set the font family to 'Material Symbols Rounded'.
+        This class is meant for displaying icons from this font family.
+    */
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2.4rem;
+    /*
+        Set the font size to 2.4rem for the icon.
+        Adjust as needed based on your design requirements.
+    */
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    /*
+        Define additional font and text properties for consistent icon display.
+        You can customize these properties based on your design preferences.
+    */
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: "liga";
+    /*
+        Enable ligatures for improved icon rendering.
+    */
+    -webkit-font-smoothing: antialiased;
+    /*
+        Enable antialiasing for smoother icon edges.
+    */
+    height: 1em;
+    width: 1em;
+    /*
+        Set the height and width of the icon.
+        Adjust these values as needed for proper sizing.
+    */
+    overflow: hidden;
+    /*
+        Hide any overflow content to ensure consistent icon rendering.
+    */
+}
+
+/**
+ * Container Styles Documentation
+ */
+
+/* Container Styles */
+.container {
+    max-width: 1600px;
+    /* Set the maximum width of the container to 1600px */
+    width: 100%;
+    /* Make the container take up 100% of its parent's width */
+    margin-inline: auto;
+    /* Center the container horizontally using auto margin */
+    padding: 0 16px;
+    /* Add padding of 16px to the left and right of the container */
+}
+
+/**
+ * Icon Button Styles Documentation
+ */
+
+/* Icon Button Styles */
+.icon-btn {
+    background-color: var(--white-alpha-8);
+    /* Set the background color for the icon button */
+    width: 48px;
+    /* Set the width of the icon button */
+    height: 48px;
+    /* Set the height of the icon button */
+    display: grid;
+    /* Use grid layout for centering content */
+    place-items: center;
+    /* Center the content both horizontally and vertically */
+    border-radius: var(--radius-circle);
+    /* Set border radius for rounded corners */
+}
+
+/**
+ * Stateful Styles Documentation
+ */
+
+/* General Stateful Styles */
+.has-state {
+    position: relative;
+    /* Set the position to relative for child absolute positioning */
+}
+
+/* Hover State Styles */
+.has-state:hover {
+    box-shadow: var(--shadow-1);
+    /* Apply box shadow on hover */
+}
+
+/* Focus State Styles */
+.has-state:is(:focus, :focus-visible) {
+    box-shadow: none;
+    /* Remove box shadow when focused */
+}
+
+/* Ripple Effect Styles */
+.has-state::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    clip-path: circle(100% at 50% 50%);
+    transition: var(--transition-short);
+}
+
+.has-state:hover::before {
+    background-color: var(--white-alpha-4);
+    /* Add background color on hover */
+}
+
+.has-state:is(:focus, :focus-visible)::before {
+    background-color: var(--white-alpha-8);
+    /* Add different background color when focused */
+    animation: ripple 250ms ease forwards;
+}
+
+/* Ripple Animation Keyframes */
+/* Keyframes for Ripple Animation */
+@keyframes ripple {
+    0% {
+        clip-path: circle(0% at 50% 50%);
+        /*
+            At the start (0%),
+            create a circle with 0% size located at the center (50% 50%).
+            This is like the initial state of a water ripple before it spreads.
+        */
+    }
+
+    100% {
+        clip-path: circle(100% at 50% 50%);
+        /*
+            At the end (100%),
+            expand the circle to 100% size while keeping it centered at (50% 50%).
+            This simulates the ripple effect growing, covering the entire container.
+        */
+    }
+}
+
+/**
+ * Primary Button Styles Documentation
+ */
+
+/* Primary Button Styles */
+.btn-primary {
+    background-color: var(--primary);
+    /* Set the background color for the primary button */
+    color: var(--on-primary);
+    /* Set the text color for the primary button */
+    height: 48px;
+    /* Set the height of the primary button */
+    line-height: 48px;
+    /* Set the line height of the primary button */
+    max-width: max-content;
+    /* Set the maximum width based on content */
+    display: flex;
+    /* Use flex layout for proper alignment */
+    align-items: center;
+    /* Center the content vertically */
+    gap: 16px;
+    /* Set the gap between elements inside the button */
+    padding-inline: 16px;
+    /* Add horizontal padding to the primary button */
+    border-radius: var(--radius-pill);
+    /* Set border radius for rounded corners */
+}
+
+/* Primary Button Text Styles */
+.btn-primary .span {
+    font-weight: var(--weight-semiBold);
+    /* Set font weight for the text within the primary button */
+}
+
+/* Disabled State Styles */
+.btn-primary[disabled] {
+    background-color: var(--outline);
+    /* Set background color for disabled state */
+    color: var(--on-surface-variant);
+    /* Set text color for disabled state */
+    cursor: not-allowed;
+    /* Set cursor to not-allowed for disabled state */
+}
+
+/* Disabled State Ripple Effect Removal */
+.btn-primary[disabled]::before {
+    display: none;
+    /* Hide ripple effect for disabled state */
+}
