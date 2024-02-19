@@ -337,3 +337,79 @@ body {
     display: none;
     /* Hide ripple effect for disabled state */
 }
+
+/**
+ * Card Styles Documentation
+ */
+
+/* Base Card Styles */
+.card {
+    background-color: var(--surface);
+    color: var(--on-surface);
+}
+
+/* Large Card Styles */
+.card-lg {
+    border-radius: var(--radius-28);
+    padding: 20px;
+}
+
+/* Small Card Styles */
+.card-sm {
+    border-radius: var(--radius-16);
+    padding: 16px;
+}
+
+/**
+ * Text and Typography Styles Documentation
+ */
+
+/* Heading Text Styles */
+.heading {
+    color: var(--white);
+    font-size: var(--heading);
+    line-height: 1.1;
+}
+
+/* Title 1 Text Styles */
+.title-1 {
+    font-size: var(--title-1);
+}
+
+/* Title 2 Text Styles */
+.title-2 {
+    font-size: var(--title-2);
+    margin-block-end: 12px;
+}
+
+/* Title 3 Text Styles */
+.title-3 {
+    font-size: var(--title-3);
+    font-weight: var(--weight-semiBold);
+}
+
+/* Body 1 Text Styles */
+.body-1 {
+    font-size: var(--body-1);
+}
+
+/* Body 2 Text Styles */
+.body-2 {
+    font-size: var(--body-2);
+    font-weight: var(--weight-semiBold);
+}
+
+/* Body 3 Text Styles */
+.body-3 {
+    font-size: var(--body-3);
+}
+
+/* Label 1 Text Styles */
+.label-1 {
+    font-size: var(--label-1);
+}
+
+/* Label 2 Text Styles */
+.label-2 {
+    font-size: var(--label-2);
+}
