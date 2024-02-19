@@ -1,0 +1,85 @@
+/**
+ * Current Weather Card Styles Documentation
+ */
+
+/* Weather Information Wrapper Styles */
+.current-weather-card .weapper {
+    /*
+        This style block defines the appearance of the wrapper containing weather information
+        within the current weather card.
+    */
+
+    /* Adds space around the wrapper */
+    margin-block: 12px;
+
+    /* Arranges child elements in a horizontal line */
+    display: flex;
+
+    /* Specifies the gap between child elements */
+    gap: 8px;
+
+    /* Aligns child elements vertically in the center */
+    align-items: center;
+}
+
+/* Weather Icon Styles */
+.current-weather-card .weather-icon {
+    /*
+        This style block centers the weather icon horizontally within the current weather card.
+    */
+
+    /* Centers the element horizontally */
+    margin-inline: auto;
+}
+
+/* Capitalize Weather Description Styles */
+.current-weather-card > .body-3 {
+    /*
+        This style block capitalizes the first letter of each word in the weather description text.
+    */
+
+    /* Transforms the text to capitalize each word */
+    text-transform: capitalize;
+}
+
+/* Meta List Styles */
+.current-weather-card .meta-list {
+    /*
+        This style block defines the appearance of the meta list within the current weather card.
+    */
+
+    /* Adds space above the meta list */
+    margin-block-start: 16px;
+
+    /* Adds space inside the meta list at the top */
+    padding-block-start: 16px;
+
+    /* Adds a border at the top of the meta list */
+    border-block-start: 1px solid var(--outline);
+}
+
+/* Meta Item Styles */
+.current-weather-card .meta-item {
+    /*
+        This style block defines the appearance of individual meta items within the meta list.
+    */
+
+    /* Arranges child elements in a horizontal line */
+    display: flex;
+
+    /* Aligns child elements vertically in the center */
+    align-items: center;
+
+    /* Specifies the gap between child elements */
+    gap: 8px;
+}
+
+/* Meta Text Styles */
+.current-weather-card .meta-text {
+    /*
+        This style block defines the appearance of meta text within the current weather card.
+    */
+
+    /* Sets the color of the meta text */
+    color: var(--on-surface-variant);
+}
