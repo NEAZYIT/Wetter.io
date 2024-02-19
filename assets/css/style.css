@@ -171,10 +171,45 @@
     */
 
 
+    /* Italiana Logo Class Styles */
     .italiana-logo {
         font-family: var(--italiana);
-        font-weight: var(--weight-regular);
+        /*
+        Set the font family to Italiana, a serif font.
+        Adjust the --italiana variable according to your project's font stack.
+        */
+        width: 54px;
+        /* Set the width of the logo */
+        height: 22px;
+        /* Set the height of the logo */
+        position: absolute;
+        /* Position the logo absolutely within its containing element */
+        left: 100px;
+        /* Set the left position of the logo */
+        top: 27px;
+        /* Set the top position of the logo */
         font-style: normal;
+        /* Set the font style to normal (non-italic) */
+        color: white;
+        /* Set the text color of the logo to white */
+        text-decoration: none;
+        /* Remove the default underline for links */
+        cursor: pointer;
+        /* Set the cursor to pointer for interactive feedback */
+        transition: color 0.2s ease-in-out;
+        /*
+        Apply a smooth color transition on hover.
+        Adjust the duration and easing function as needed.
+        */
+    }
+
+    /* Italiana Logo Hover Styles */
+    .italiana-logo:hover {
+        color: #ffbc04;
+        /*
+        Change the text color to #ffbc04 (yellow) on hover.
+        Adjust the color value to your preferred hover color.
+        */
     }
 
     .montserrat-content {
