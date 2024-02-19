@@ -1,0 +1,165 @@
+/**
+ * Header, Button, and Span Styles Documentation
+ */
+
+/* Hide Header, Primary Button, and Span by Default */
+.header
+.btn-primary
+.span {
+    display: none;
+}
+
+/* Flex Layout for Header, Container, and Header Actions */
+.header,
+.container,
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+/* Align Container and Header Items */
+.header,
+.container {
+    justify-content: space-between;
+}
+
+/* Set Gap between Header Actions Elements */
+.header-actions {
+    gap: 16px;
+}
+
+/* Apply Padding to Header and Primary Button */
+.header,
+.btn-primary {
+    padding-inline: 12px;
+}
+
+/**
+ * Search View Styles Documentation
+ */
+
+/* Fixed Position Search View */
+.search-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--surface);
+    color: var(--on-surface);
+    clip-path: circle(4% at calc(100% - 102px) 5%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 4;
+    transition: clip-path 500ms ease;
+}
+
+/* Active State Styles for Search View */
+.search-view.active {
+    clip-path: circle(130% at 73% 5%);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Search Wrapper Styles */
+.search-wrapper {
+    position: relative;
+    border-block-end: 1px solid var(--outline);
+}
+
+/* Loading Animation Styles for Search Wrapper */
+.search-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--on-surface);
+    border-block-start-color: transparent;
+    border-block-end-color: transparent;
+    border-inline-end-color: transparent;
+    border-radius: var(--radius-circle);
+    animation: loading 500ms linear infinite;
+    display: none;
+}
+
+/* Loading Animation Keyframes */
+@keyframes loading {
+    0% {
+        transform: translateY(-50%) rotate(0);
+    }
+
+    100% {
+        transform: translateY(-50%) rotate(1turn);
+    }
+}
+
+/* Display Loading Animation on Searching State */
+.search-wrapper:has(.searching)::before {
+    display: block;
+}
+
+/* Search Field Styles */
+.search-field {
+    height: 80px;
+    line-height: 80px;
+    padding-inline: 56px 16px;
+    outline: none;
+}
+
+/* Search Field Placeholder Styles */
+.search-field::placeholder {
+    color: var(--on-surface-variant-2);
+}
+
+/* Hide Search Cancel Button for Webkit */
+.search-field::-webkit-search-cancel-button {
+    display: none;
+}
+
+/* Leading Icon Styles within Search Wrapper */
+.search-wrapper .leading-icon {
+    position: absolute;
+    top: 50%;
+    left: 28px;
+    transform: translate(-50%, -50%);
+}
+
+/* Hide Icon within Search Wrapper by Default */
+.search-wrapper>.m-icone {
+    display: none;
+}
+
+/* Adjust Styles for Icon Button within Search Wrapper */
+.search-wrapper>.icon-btn {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Styles for Search Result List in Search View */
+.search-view .view-list {
+    padding-block: 8px 16px;
+}
+
+/* Styles for Search Result Item in Search View */
+.search-view .view-item {
+    position: relative;
+    height: 56px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    padding-inline: 16px 24px;
+}
+
+.search-view .view-item :is(.m-icone, .item-subtitle) {
+    color: var(--on-surface-variant);
+}
+
+.search-view .view-item .item-link {
+    position: absolute;
+    inset: 0;
+    box-shadow: none;
+}
