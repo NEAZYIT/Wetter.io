@@ -1,0 +1,78 @@
+/**
+ * Forecast Card Styles Documentation
+ */
+
+/* Title-2 in Forecast Card Styles */
+.forecast-card .title-2 {
+    /*
+        This style block adjusts the margin at the bottom of the Title-2 within the Forecast Card.
+        It ensures proper spacing for a cleaner visual appearance.
+    */
+
+    /* Removes the default margin at the bottom */
+    margin-block-end: 0;
+}
+
+/* Common Styling for Card Items and Icone Wrapper */
+.forecast-card :is(.card-item, .icone-wrapper) {
+    /*
+        This style block defines common display and alignment properties for both card items
+        and the icone wrapper within the Forecast Card. It ensures a consistent layout.
+    */
+
+    /* Arranges child elements in a horizontal line */
+    display: flex;
+
+    /* Aligns child elements vertically in the center */
+    align-items: center;
+}
+
+/* Margin Between Forecast Card Items */
+.forecast-card .card-item:not(:last-child) {
+    /*
+        This style block adds margin between individual forecast card items within the Forecast Card.
+        It avoids excessive spacing after the last item for a more balanced design.
+    */
+
+    /* Adds margin at the bottom of each card item except the last one */
+    margin-block-end: 12px;
+}
+
+/* Gap Between Elements in Icone Wrapper */
+.forecast-card .icone-wrapper {
+    /*
+        This style block defines the gap between elements (e.g., icons, dual moon weather, day) 
+        within the icone wrapper of the Forecast Card. It controls the spacing for better alignment.
+    */
+
+    /* Specifies the gap between child elements */
+    gap: 8px;
+}
+
+/* Label-1 Styling in Forecast Card */
+.forecast-card .label-1 {
+    /*
+        This style block defines the appearance of Label-1 elements within the Forecast Card.
+        It sets the color and font weight for better visibility and emphasis on information.
+    */
+
+    /* Sets the color of Label-1 text */
+    color: var(--on-surface-variant);
+
+    /* Applies semi-bold font weight */
+    font-weight: var(--weight-semiBold);
+}
+
+/* Full Width and Right-Aligned Label-1 in Card Items */
+.forecast-card .card-item > .label-1 {
+    /*
+        This style block ensures that Label-1 elements within the Forecast Card's card items
+        occupy the full width and are right-aligned. It optimizes the presentation of information.
+    */
+
+    /* Makes the label span the full width */
+    width: 100%;
+
+    /* Aligns the text to the right */
+    text-align: right;
+}
