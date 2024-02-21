@@ -92,3 +92,19 @@
     background-color: var(--bg-aqi-5);
     color: var(--on-bg-aqi-5);
 }
+
+/**
+ * CSS Styles for the Highlight Card Section (today_highlights.css)
+ */
+
+/* Styles for the Card List Container in Highlight Card Two */
+.highlight-card .two .card-list {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+}
+
+/* Styles for the First Label in the Card within Highlight Card Two */
+.highlight-card .two .label-1 {
+    margin-block-end: 4px;
+}
