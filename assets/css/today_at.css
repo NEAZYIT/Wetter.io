@@ -3,9 +3,10 @@
  */
 .slider-container {
     overflow-x: auto;
-    margin-inline: -16px;
+    padding-inline: 16px;
+    /* Adjust the spacing inside the container */
     display: flex;
-    gap: 12px;
+    gap: 2px;
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -24,14 +25,10 @@
     display: flex;
     gap: 12px;
     flex-wrap: nowrap;
-    margin-inline: 16px;
-}
-
-/**
- * Add margin to the first child of the slider list.
- */
-.slider-list:first-child {
-    margin-block-end: 16px;
+    margin-inline: 0;
+    /* Remove the margin for the slider list */
+    padding-block: 16px;
+    /* Add padding to the top and bottom */
 }
 
 /**
@@ -56,11 +53,11 @@
  */
 @media only screen and (max-width: 768px) {
     .slider-container {
-        margin-inline: -16px;
+        padding-inline: 8px;
     }
 
     .slider-list {
-        margin-inline: 8px;
+        padding-block: 8px;
     }
 
     .slider-item {
@@ -73,11 +70,11 @@
  */
 @media only screen and (max-width: 480px) {
     .slider-container {
-        margin-inline: -16px;
+        padding-inline: 4px;
     }
 
     .slider-list {
-        margin-inline: 4px;
+        padding-block: 4px;
     }
 
     .slider-item {
@@ -90,15 +87,15 @@
  */
 @media only screen and (max-width: 320px) {
     .slider-container {
-        margin-inline: -16px;
+        padding-inline: 2px;
     }
 
     .slider-list {
-        margin-inline: 2px;
+        padding-block: 2px;
     }
 
+    /* Adjust min-width to accommodate 7 cards with some margin */
     .slider-item {
-        /* Adjust min-width to accommodate 7 cards with some margin */
         min-width: calc((100% - 6 * 12px) / 7);
     }
 }

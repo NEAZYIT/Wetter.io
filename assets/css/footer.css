@@ -1,0 +1,38 @@
+/**
+ * CSS styles for the footer section in your stylesheet.
+ */
+
+/* Common styles for the footer and icons-footer */
+.footer,
+.icons-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Specific styles for the footer */
+.footer {
+    color: var(--on-surface-variant);
+    text-align: center;
+    gap: 12px 24px; /* Adjust the gap between items horizontally and vertically */
+    margin-block-start: 28px; /* Set the top margin */
+    /* display: none; */ /* Initially hide the footer */
+}
+
+/* Styles for the icons-footer */
+.icons-footer {
+    gap: 16px; /* Adjust the gap between text and icons */
+    margin-top: 8px; /* Add space between the copyright text and icons */
+    margin-bottom: 16px; /* Add space below the icons */
+}
+
+/* Styles for the fade-in effect of the footer */
+.fade-in .footer {
+    display: flex; /* Show the footer when the fade-in class is applied */
+}
+
+/* Additional styling for the last child of the footer */
+.footer .body-3:last-child {
+    gap: 6px; /* Adjust the gap between elements in the last child */
+}
