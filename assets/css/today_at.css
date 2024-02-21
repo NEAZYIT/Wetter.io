@@ -1,0 +1,119 @@
+/**
+ * Styles for the slider container.
+ */
+.slider-container {
+    overflow-x: auto;
+    margin-inline: -16px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/**
+ * Hide the scrollbar for the slider container.
+ */
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+/**
+ * Styles for the slider list.
+ */
+.slider-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: nowrap;
+    margin-inline: 16px;
+}
+
+/**
+ * Add margin to the first child of the slider list.
+ */
+.slider-list:first-child {
+    margin-block-end: 16px;
+}
+
+/**
+ * Add pseudo-elements before and after the slider list.
+ */
+.slider-list::before,
+.slider-list::after {
+    content: "";
+    min-width: 4px;
+}
+
+/**
+ * Styles for the slider item.
+ */
+.slider-item {
+    min-width: 110px;
+    flex: 1 1 100%;
+}
+
+/**
+ * Responsive styles for tablets (up to 768px width).
+ */
+@media only screen and (max-width: 768px) {
+    .slider-container {
+        margin-inline: -16px;
+    }
+
+    .slider-list {
+        margin-inline: 8px;
+    }
+
+    .slider-item {
+        min-width: 80px;
+    }
+}
+
+/**
+ * Responsive styles for mobile devices (up to 480px width).
+ */
+@media only screen and (max-width: 480px) {
+    .slider-container {
+        margin-inline: -16px;
+    }
+
+    .slider-list {
+        margin-inline: 4px;
+    }
+
+    .slider-item {
+        min-width: 60px;
+    }
+}
+
+/**
+ * Responsive styles for iPhone SE (320px viewport width).
+ */
+@media only screen and (max-width: 320px) {
+    .slider-container {
+        margin-inline: -16px;
+    }
+
+    .slider-list {
+        margin-inline: 2px;
+    }
+
+    .slider-item {
+        /* Adjust min-width to accommodate 7 cards with some margin */
+        min-width: calc((100% - 6 * 12px) / 7);
+    }
+}
+
+/**
+ * Styles for the slider card.
+ */
+.slider-card {
+    text-align: center;
+}
+
+/**
+ * Styles for the weather icon within the slider item.
+ */
+.slider-item .weather-icon {
+    margin-inline: auto;
+    margin-block: 12px;
+}
