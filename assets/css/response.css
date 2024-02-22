@@ -308,4 +308,57 @@
         filter: drop-shadow(var(--shadow-2));
         /* Apply a different drop shadow when focused within */
     }
+
+    /* 🌐 MAIN SECTION STYLES 🌐 */
+
+    /* Set the height of the main section */
+    main {
+        height: calc(100vh - 120px);
+        /* Standard height calculation excluding header */
+        height: calc(100svh - 120px);
+        /* Adjusted height calculation */
+    }
+
+    /* 📜 ARTICLE CONTAINER STYLES 📜 */
+    article.container {
+        grid-template-columns: 360px minmax(0, 1fr);
+        /* Define column layout */
+        gap: 40px;
+        /* Set the gap between columns */
+    }
+
+    /* 🌦️ CURRENT WEATHER STYLES 🌦️ */
+    .current-weather .weather-icon {
+        width: 80px;
+        /* Adjust weather icon width */
+    }
+
+    /* 📅 FORECAST CARD STYLES 📅 */
+    .forecast-card .title-2 {
+        --title-2: 2.2rem;
+        /* Customize title-2 font size */
+    }
+
+    /* 🌟 HIGHLIGHT CARD STYLES 🌟 */
+    .highlight-card:nth-child(-n+2) {
+        height: 200px;
+        /* Set height for first two highlight cards */
+    }
+
+    .highlight-card:nth-child(n+3) {
+        height: 150px;
+        /* Set height for the rest of the highlight cards */
+    }
+
+    /* 🎨 ICON STYLES 🎨 */
+    .highlight-card .m-icone {
+        font-size: 4.8rem;
+        /* Adjust icon font size */
+    }
+
+    /* 🔄 SLIDER LIST STYLES 🔄 */
+    .slider-list {
+        gap: 16px;
+        /* Set the gap between slider items */
+    }
 }
