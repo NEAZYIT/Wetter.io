@@ -292,4 +292,20 @@
         height: 20px;
         /* Set height for scrollbar button in the search view */
     }
+
+    /* 🧐 SEARCH-VIEW HOVER AND FOCUS STYLES 🧐 */
+
+    /* 🖱️ HOVER EFFECT 🖱️ */
+
+    .search-view:is(:hover, :has(.view-list):hover) {
+        filter: drop-shadow(var(--shadow-1));
+        /* Apply drop shadow on hover */
+    }
+
+    /* 🧐 FOCUS EFFECT 🧐 */
+
+    .search-view:is(:focus-within, :has(.view-list):focus-within) {
+        filter: drop-shadow(var(--shadow-2));
+        /* Apply a different drop shadow when focused within */
+    }
 }
