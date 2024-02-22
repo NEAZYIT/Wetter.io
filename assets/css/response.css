@@ -362,3 +362,13 @@
         /* Set the gap between slider items */
     }
 }
+
+/* 🎨 MEDIA QUERY FOR MINIMUM WIDTH 1400px 🎨 */
+@media (min-width: 1400px) {
+
+    /* 🌟 HIGHLIGHT LIST STYLES 🌟 */
+    .highlight-list {
+        grid-template-columns: repeat(4, 1fr);
+        /* Adjust grid columns for larger screens */
+    }
+}
