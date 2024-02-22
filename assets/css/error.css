@@ -1,0 +1,58 @@
+/* 🚨 ERROR CONTENT STYLES 🚨 */
+
+/* Error Content Container */
+.error-content {
+    /* Positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Full viewport height */
+
+    /* Background */
+    background-color: var(--background);
+
+    /* Flex Container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Initially Hidden */
+    display: none;
+}
+
+/* Error Content Button Styles */
+.error-content .btn-primary {
+    /* Margin and padding */
+    margin-top: 20px;
+    padding: 15px;
+
+    /* Border and Background */
+    border: none;
+    background-color: #fae3da;
+
+    /* Text Color and Font Size */
+    color: rgb(245, 143, 27);
+    font-size: 18px;
+
+    /* Border Radius */
+    border-radius: var(--radius-pill);
+}
+
+/* 📱 Responsive Styles for Tablets */
+@media (max-width: 768px) {
+    .error-content .btn-primary {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* 📱 Responsive Styles for Mobile Phones */
+@media (max-width: 480px) {
+    .error-content .btn-primary {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
