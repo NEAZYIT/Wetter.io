@@ -1,0 +1,34 @@
+/* 🔄 Loading Spinner Styles 🔄 */
+.loading {
+    /* Positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Background */
+    background-color: var(--background);
+    /* display: grid; */
+
+    /* Centering */
+    place-items: center;
+
+    /* Z-index */
+    z-index: 1;
+
+    /* Initially Hidden */
+    display: none;
+}
+
+
+/* 🔄 Loading Spinner Animation 🔄 */
+.loading::before {
+    content: "";
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--on-background);
+    border-block-start-color: transparent;
+    border-radius: var(--radius-circle);
+    animation: loading 500ms linear infinite;
+}
