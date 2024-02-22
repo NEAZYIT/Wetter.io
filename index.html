@@ -86,6 +86,8 @@
     <link rel="stylesheet" href="assets/css/today_highlights.css">
     <link rel="stylesheet" href="assets/css/today_at.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/loading.css">
+    <link rel="stylesheet" href="assets/css/error.css">
     <!--
     This link tag imports an external CSS stylesheet into your HTML document.
     - "rel="stylesheet"": Specifies that the linked file is a stylesheet.
@@ -494,7 +496,7 @@
                 -->
 
                 <!-- #Hourly Forecast Section -->
-                <div class="section hourly-forecast" aria-label="hourly forecast" data-hourly-forecast>
+                <section class="section hourly-forecast" aria-label="hourly forecast" data-hourly-forecast>
                     <h2 class="title-2">Today at</h2>
 
                     <!-- Temperature Slider -->
@@ -666,34 +668,61 @@
 
                         </ul>
                     </div>
-                </div>
-            </div>
+                </section>
 
-            <!-- FOOTER SECTION -->
+                <!-- FOOTER SECTION -->
 
-            <!-- Container for the footer and icons -->
-            <footer class="footer">
-                <!-- Copyright Information -->
-                <p class="body-3">
-                    Copyright 2024 Wetterio & CodewithNeazy. All Rights Reserved.
-                </p>
+                <!-- Container for the footer and icons -->
+                <footer class="footer">
+                    <!-- Copyright Information -->
+                    <p class="body-3">
+                        Copyright 2024 Wetterio & CodewithNeazy. All Rights Reserved.
+                    </p>
 
-                <!-- Powered By OpenWeatherMap -->
-                <p class="body-3">
-                    <!-- Icons Footer Container -->
+                    <!-- Powered By OpenWeatherMap -->
+                    <p class="body-3">
+                        <!-- Icons Footer Container -->
                     <div class="icons-footer">
                         Powered By
                         <!-- OpenWeatherMap Logo Link -->
-                        <a href="https://openweathermap.org/api" title="OpenWeatherMap API" target="_blank" rel="noopener">
+                        <a href="https://openweathermap.org/api" title="OpenWeatherMap API" target="_blank"
+                            rel="noopener">
                             <!-- OpenWeatherMap Logo -->
                             <img src="/assets/images/icons/openweather.png" width="150" height="30" loading="lazy"
                                 alt="OpenWeather" title="OpenWeather">
                         </a>
                     </div>
-                </p>
-            </footer>
+                    </p>
+                </footer>
+            </div>
+
+            <!-- 🔄 LOADING SPINNER 🔄 -->
+
+            <!-- Loading Spinner Container -->
+            <div class="loading" data-loading></div>
         </article>
     </main>
+
+    <!-- 🚨 ERROR CONTENT SECTION 🚨 -->
+
+    <!-- Error Content Section -->
+    <section class="error-content" data-error-content>
+        <!-- Main Heading -->
+        <h1 class="heading">Page Not Found</h1>
+
+        <!-- Subheading with Error Code -->
+        <h2 class="heading">404</h2>
+
+        <!-- Error Message -->
+        <p class="body-1">Sorry, the page you are looking for might be in another universe.</p>
+
+        <!-- Primary Action Button -->
+        <a href="#" class="btn-primary">
+            <!-- Span for Text Styling -->
+            <span class="span">Wubba Lubba Dub Dub! Teleport to Home</span>
+        </a>
+    </section>
+
 
 </body>
 
