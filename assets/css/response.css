@@ -1,75 +1,130 @@
-/* 🎨 MAIN SECTION STYLES 🎨 */
+/**
+ * Media
+ * 
+ * This class represents a media element in CSS.
+ * It can be used to apply styles to various types of media, such as images, videos, or audio.
+ * 
+ */
 
-/* Set the main section height to fill the viewport minus 96 pixels */
-main {
-    height: calc(100vh - 96px);
-    height: calc(100svh - 96px); /* Assuming 'svh' is a custom property, otherwise, use 'vh' */
-}
+@media(min-width: 768px) {
 
-/* 📜 ARTICLE CONTAINER STYLES 📜 */
+    /* 🎨 MAIN SECTION STYLES 🎨 */
 
-/* Article container styling */
-article.container {
-    padding-block-start: 0; /* Remove top padding */
-    grid-template-columns: 280px minmax(0, 1fr); /* Two columns with a minimum width for the second column */
-    align-items: flex-start; /* Align items at the start of the cross axis */
-    gap: 30px; /* Set the gap between columns */
-}
+    /* Set the main section height to fill the viewport minus 96 pixels */
+    main {
+        height: calc(100vh - 96px);
+        height: calc(100svh - 96px);
+        /* Assuming 'svh' is a custom property, otherwise, use 'vh' */
+    }
 
-/* 🚀 CONTENT-LEFT STYLES 🚀 */
+    /* 📜 ARTICLE CONTAINER STYLES 📜 */
 
-/* Sticky positioning for content-left */
-.content-left {
-    position: sticky;
-    top: 0; /* Stick to the top */
-}
+    /* Article container styling */
+    article.container {
+        padding-block-start: 0;
+        /* Remove top padding */
+        grid-template-columns: 280px minmax(0, 1fr);
+        /* Two columns with a minimum width for the second column */
+        align-items: flex-start;
+        /* Align items at the start of the cross axis */
+        gap: 30px;
+        /* Set the gap between columns */
+    }
 
-/* 🧱 SECTION STYLES 🧱 */
+    /* 🚀 CONTENT-LEFT STYLES 🚀 */
 
-/* Margin between sections, except the last one */
-.section:not(:last-child) {
-    margin-block: 20px;
-}
+    /* Sticky positioning for content-left */
+    .content-left {
+        position: sticky;
+        top: 0;
+        /* Stick to the top */
+    }
 
-/* 🌦 FORECAST CARD STYLES 🌦 */
+    /* 🧱 SECTION STYLES 🧱 */
 
-/* Margin between forecast card items, except the last one */
-.forecast-card .card-item:not(:last-child) {
-    margin-block: 15px;
-}
+    /* Margin between sections, except the last one */
+    .section:not(:last-child) {
+        margin-block: 20px;
+    }
 
-/* ⚡ HIGHLIGHT LIST STYLES ⚡ */
+    /* 🌦 FORECAST CARD STYLES 🌦 */
 
-/* Grid template columns for highlight list */
-.highlight-list {
-    grid-template-columns: 1fr 1fr;
-}
+    /* Margin between forecast card items, except the last one */
+    .forecast-card .card-item:not(:last-child) {
+        margin-block: 15px;
+    }
 
-/* 🌟 HIGHLIGHT CARD STYLES 🌟 */
+    /* ⚡ HIGHLIGHT LIST STYLES ⚡ */
 
-/* Span two columns and set height for the first two highlight cards */
-.highlight-card:nth-child(-n+2) {
-    grid-column: span 2;
-    height: 160px;
-}
+    /* Grid template columns for highlight list */
+    .highlight-list {
+        grid-template-columns: 1fr 1fr;
+    }
 
-/* Set height for highlight cards starting from the third one */
-.highlight-card:nth-child(n+3) {
-    height: 120px;
-}
+    /* 🌟 HIGHLIGHT CARD STYLES 🌟 */
 
-/* 🌈 HIGHLIGHTS STYLES 🌈 */
+    /* Span two columns and set height for the first two highlight cards */
+    .highlight-card:nth-child(-n+2) {
+        grid-column: span 2;
+        height: 160px;
+    }
 
-/* Set font size for highlight icons */
-.highlights .m-icone {
-    font-size: 3.6rem;
-}
+    /* Set height for highlight cards starting from the third one */
+    .highlight-card:nth-child(n+3) {
+        height: 120px;
+    }
 
-/* 🔄 HIGHLIGHT CARD ONE STYLES 🔄 */
+    /* 🌈 HIGHLIGHTS STYLES 🌈 */
 
-/* Adjust width and flex-direction for the first highlight card items */
-.highlight-card.one .card-item {
-    width: 25%;
-    flex-direction: column-reverse; /* Reverse the order of flex items */
-    gap: 8px; /* Set the gap between items */
+    /* Set font size for highlight icons */
+    .highlights .m-icone {
+        font-size: 3.6rem;
+    }
+
+    /* 🔄 HIGHLIGHT CARD ONE STYLES 🔄 */
+
+    /* Adjust width and flex-direction for the first highlight card items */
+    .highlight-card.one .card-item {
+        width: 25%;
+        flex-direction: column-reverse;
+        /* Reverse the order of flex items */
+        gap: 8px;
+        /* Set the gap between items */
+    }
+
+    /* 🔄 SLIDER CONTAINER STYLES 🔄 */
+
+    /* Adjust margin to accommodate the slider container */
+    .slider-container {
+        margin-inline: 0 -24px;
+        /* Negative margin to extend the slider container */
+        border-bottom-left-radius: var(--radius-16);
+        /* Apply bottom-left border radius */
+        border-top-left-radius: var(--radius-16);
+        /* Apply top-left border radius */
+    }
+
+    /* 🚫 SLIDER LIST BEFORE PSEUDO-ELEMENT STYLES 🚫 */
+
+    /* Hide the pseudo-element before the slider list */
+    .slider-list::before {
+        display: none;
+    }
+
+    /* 🚀 SLIDER LIST AFTER PSEUDO-ELEMENT STYLES 🚀 */
+
+    /* Set a minimum width for the pseudo-element after the slider list */
+    .slider-list::after {
+        min-width: 12px;
+        /* Minimum width for the after pseudo-element */
+    }
+
+    /* 🕐 HOURLY FORECAST CARD-SM STYLES 🕐 */
+
+    /* Padding for hourly forecast small cards */
+    .hourly-forecast .card-sm {
+        padding: 16px;
+        /* Apply padding to the hourly forecast small cards */
+    }
+
 }
