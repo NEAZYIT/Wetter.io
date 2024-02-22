@@ -1,0 +1,75 @@
+/* 🎨 MAIN SECTION STYLES 🎨 */
+
+/* Set the main section height to fill the viewport minus 96 pixels */
+main {
+    height: calc(100vh - 96px);
+    height: calc(100svh - 96px); /* Assuming 'svh' is a custom property, otherwise, use 'vh' */
+}
+
+/* 📜 ARTICLE CONTAINER STYLES 📜 */
+
+/* Article container styling */
+article.container {
+    padding-block-start: 0; /* Remove top padding */
+    grid-template-columns: 280px minmax(0, 1fr); /* Two columns with a minimum width for the second column */
+    align-items: flex-start; /* Align items at the start of the cross axis */
+    gap: 30px; /* Set the gap between columns */
+}
+
+/* 🚀 CONTENT-LEFT STYLES 🚀 */
+
+/* Sticky positioning for content-left */
+.content-left {
+    position: sticky;
+    top: 0; /* Stick to the top */
+}
+
+/* 🧱 SECTION STYLES 🧱 */
+
+/* Margin between sections, except the last one */
+.section:not(:last-child) {
+    margin-block: 20px;
+}
+
+/* 🌦 FORECAST CARD STYLES 🌦 */
+
+/* Margin between forecast card items, except the last one */
+.forecast-card .card-item:not(:last-child) {
+    margin-block: 15px;
+}
+
+/* ⚡ HIGHLIGHT LIST STYLES ⚡ */
+
+/* Grid template columns for highlight list */
+.highlight-list {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* 🌟 HIGHLIGHT CARD STYLES 🌟 */
+
+/* Span two columns and set height for the first two highlight cards */
+.highlight-card:nth-child(-n+2) {
+    grid-column: span 2;
+    height: 160px;
+}
+
+/* Set height for highlight cards starting from the third one */
+.highlight-card:nth-child(n+3) {
+    height: 120px;
+}
+
+/* 🌈 HIGHLIGHTS STYLES 🌈 */
+
+/* Set font size for highlight icons */
+.highlights .m-icone {
+    font-size: 3.6rem;
+}
+
+/* 🔄 HIGHLIGHT CARD ONE STYLES 🔄 */
+
+/* Adjust width and flex-direction for the first highlight card items */
+.highlight-card.one .card-item {
+    width: 25%;
+    flex-direction: column-reverse; /* Reverse the order of flex items */
+    gap: 8px; /* Set the gap between items */
+}
