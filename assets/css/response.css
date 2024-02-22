@@ -6,7 +6,7 @@
  * 
  */
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
 
     /* 🎨 MAIN SECTION STYLES 🎨 */
 
@@ -127,4 +127,169 @@
         /* Apply padding to the hourly forecast small cards */
     }
 
+}
+
+/* 🎨 MEDIA QUERY FOR MINIMUM WIDTH 1200px 🎨 */
+
+@media (min-width: 1200px) {
+    /* 🌐 ROOT VARIABLES FOR LARGE SCREENS 🌐 */
+
+    :root {
+        --heading: 8rem;
+        /* Large heading font size */
+        --title-2: 2rem;
+        /* Title-2 font size */
+    }
+
+    /* 📦 CONTAINER STYLES FOR LARGE SCREENS 📦 */
+
+    .container {
+        padding: 8px;
+        /* Padding for general container */
+    }
+
+    /* 🃏 LARGE CARD STYLES 🃏 */
+
+    .card-lg {
+        padding: 36px;
+        /* Padding for large cards */
+    }
+
+    /* 🔍 SMALL CARD STYLES 🔍 */
+
+    .card-sm {
+        padding: 24px;
+        /* Padding for small cards */
+    }
+
+    /* 📖 TITLE-1 FONT SIZE 📖 */
+
+    .title-1 {
+        --title-1: 3.6rem;
+        /* Title-1 font size */
+    }
+
+    /* 🌈 HIGHLIGHT-CARD.TWO CARD-ITEM COLUMN GAP 🌈 */
+
+    .highlight-card.two .card-item {
+        column-gap: 24px;
+        /* Column gap for card items in highlight-card.two */
+    }
+
+    /* 🌟 HEADER STYLES FOR LARGE SCREENS 🌟 */
+
+    .header .icon-btn {
+        display: none;
+        /* Hide icon buttons in the header */
+    }
+
+    .header {
+        position: relative;
+        /* Positioning for the header */
+        height: 100px;
+        /* Height of the header */
+        z-index: 4;
+        /* Z-index for stacking order */
+    }
+
+    .header .container {
+        padding-block: 0;
+        /* Remove padding for the header container */
+        height: 100%;
+        /* Set the height of the header container */
+    }
+
+    /* 🔍 SEARCH-VIEW STYLES FOR LARGE SCREENS 🔍 */
+
+    .search-view,
+    .search-view.active {
+        all: unset;
+        /* Unset all previous styles */
+        display: block;
+        /* Display the search view block */
+        position: relative;
+        /* Relative positioning for search view */
+        width: 500px;
+        /* Set a fixed width for the search view */
+        animation: none;
+        /* Disable animation for the search view */
+    }
+
+    .search-wrapper {
+        border-block-end: none;
+        /* Remove border block end for the search wrapper */
+    }
+
+    .search-wrapper>.m-icone {
+        display: block;
+        /* Display the search icon block */
+    }
+
+    /* 🔍 SEARCH-FIELD STYLES FOR LARGE SCREENS 🔍 */
+
+    .search-field,
+    .search-view .view-list {
+        background-color: var(--surface);
+        /* Background color for search field and view list */
+    }
+
+    .search-field {
+        height: 56px;
+        /* Set height for the search field */
+        border-radius: var(--radius-28);
+        /* Set border radius for the search field */
+    }
+
+    /* 🔍 SEARCH-RESULT STYLES FOR LARGE SCREENS 🔍 */
+
+    .search-result,
+    .search-view:not(:focus-within) .search-result {
+        display: none;
+        /* Hide search result when not focused within search view */
+    }
+
+    .search-view:focus-within .search-result.active {
+        display: block;
+        /* Display active search result when focused within search view */
+    }
+
+    .search-view:has(.search-result.active):focus-within .search-field {
+        border-bottom-left-radius: 0;
+        /* Adjust border radius for search field */
+        border-bottom-right-radius: 0;
+        /* Adjust border radius for search field */
+    }
+
+    /* 🔍 SEARCH-VIEW-LIST STYLES FOR LARGE SCREENS 🔍 */
+
+    .search-view .view-list {
+        position: absolute;
+        /* Absolute positioning for search view list */
+        top: 100%;
+        /* Set top position below search field */
+        left: 0;
+        /* Set left position */
+        width: 100%;
+        /* Set width to cover the entire container */
+        max-height: 360px;
+        /* Set max height for the search view list */
+        border-radius: 0 0 var(--radius-28) var(--radius-28);
+        /* Border radius for the search view list */
+        border-block-start: 1px solid var(--outline);
+        /* Border block start for the search view list */
+        overflow-y: auto;
+        /* Enable vertical scrollbar when needed */
+        overflow-y: overlay;
+        /* Use overlay scrollbar style */
+    }
+
+    .search-view .view-list:empty {
+        min-height: 120px;
+        /* Set a minimum height for an empty search view list */
+    }
+
+    .search-view .search-view::-webkit-scrollbar-button {
+        height: 20px;
+        /* Set height for scrollbar button in the search view */
+    }
 }
