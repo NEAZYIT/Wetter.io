@@ -18,8 +18,14 @@ export const fetchData = function (URL, callback) {
      * @returns {Promise} - A Promise representing the JSON data from the response.
      */
     fetch(`${URL}&appid=${api_key}`)
-        .then(res => res.json())
-        .then(data => callback(data));
+        .then(res => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! Status: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then(data => callback(data))
+        .catch(error => console.error('Error fetching data:', error))
 }
 
 
@@ -40,7 +46,7 @@ export const url = {
      * @returns {string} - The generated API URL for current weather.
      */
     currentWeather(lat, lon) {
-        return 'https://api.openweathermap.org/data/2.5/weather?${lat}&${lon}&units=metric'
+        return `https://api.openweathermap.org/data/2.5/weather?${lat}&${lon}&units=metric`;
     },
 
     /**
@@ -50,7 +56,7 @@ export const url = {
      * @returns {string} - The generated API URL for weather forecast.
      */
     forecast(lat, lon) {
-        return 'https://api.openweathermap.org/data/2.5/forecast?${lat}&${lon}&units=metric'
+        return `https://api.openweathermap.org/data/2.5/forecast?${lat}&${lon}&units=metric`;
     },
 
     /**
@@ -60,7 +66,7 @@ export const url = {
     * @returns {string} - The generated API URL for air pollution data.
     */
     airPollution(lat, lon) {
-        return 'http://api.openweathermap.org/data/2.5/air_pollution?${lat}&${lon}'
+        return `https://api.openweathermap.org/data/2.5/air_pollution?${lat}&${lon}`;
     },
 
     /**
@@ -70,7 +76,7 @@ export const url = {
      * @returns {string} - The generated API URL for reverse geocoding.
      */
     reverseGeo(lat, lon) {
-        return 'http://api.openweathermap.org/geo/1.0/reverse?${lat}&${lon}&limit=5'
+        return `https://api.openweathermap.org/geo/1.0/reverse?${lat}&${lon}&limit=5`;
     },
 
     /**
@@ -79,6 +85,6 @@ export const url = {
      * @returns {string} - The generated API URL for forward geocoding.
      */
     geo(query) {
-        return 'http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5'
+        return `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5`;
     }
 }
