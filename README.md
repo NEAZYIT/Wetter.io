@@ -128,7 +128,7 @@ Congratulations! You've successfully contributed to Wetter.io. Thank you for you
 
 MIT License
 
-Copyright (c) [2024] [NEAZYIT] & [nadaAit11] 
+Copyright (c) 2024 NEAZYIT & nadaAit11 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
